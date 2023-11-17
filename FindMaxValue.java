@@ -1,24 +1,22 @@
-package teme.java_course1_intro;
-
 public class FindMaxValue {
 
-    public static int findMax(int[] arr) {
-        if (arr == null || arr.length == 0) {
-            throw new IllegalArgumentException("Input array is empty or null");
+    public static int findMax(int[] array) {
+        if (array == null || array.length == 0) {
+            throw new IllegalArgumentException("Input array is null or empty");
         }
 
-        int max = arr[0];
-        for (int num : arr) {
-            if (num > max) {
-                max = num;
+        int firstValue = array[0];
+        for (int num : array) {
+            if (num > firstValue) {
+                firstValue = num;
             }
         }
-        return max;
+        return firstValue;
     }
 
     public static void main(String[] args) {
-        int[] arr = {5, 6, 1, 2, 3, 4};
-        int max = findMax(arr);
+        int[] array = {8, 16, 2, 3, 33, 60, 122, 90, 5};
+        int max = findMax(array);
         System.out.println("Maximum value in the array: " + max);
     }
 }

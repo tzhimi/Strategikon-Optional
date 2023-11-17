@@ -1,5 +1,3 @@
-package teme.java_course1_intro;
-
 import java.util.Arrays;
 
 public class MergeSortedArrays {
